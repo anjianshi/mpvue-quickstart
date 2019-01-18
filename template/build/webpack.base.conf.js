@@ -70,7 +70,7 @@ let baseWebpackConfig = {
       {{/lint}}
       {
         test: /\.vue$/,
-        loader: 'mpvue-loader',
+        loader: 'mpvue-loader-ex',
         options: vueLoaderConfig
       },
       {
@@ -79,7 +79,7 @@ let baseWebpackConfig = {
         use: [
           'babel-loader',
           {
-            loader: 'mpvue-loader',
+            loader: 'mpvue-loader-ex',
             options: Object.assign({checkMPEntry: true}, vueLoaderConfig)
           },
         ]

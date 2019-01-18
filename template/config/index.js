@@ -12,6 +12,12 @@ var fileExtConfig = {
         script: 'js',
         style: 'wxss',
         platform: 'wx'
+    },
+    ali: {
+      template: 'axml',
+      script: 'js',
+      style: 'acss',
+      platform: 'ali'
     }
 }
 var fileExt = fileExtConfig[process.env.PLATFORM]
