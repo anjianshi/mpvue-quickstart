@@ -1,8 +1,8 @@
 {
-  "name": "mpvue-quickstart",
+  "name": "mpvue-quickstart-ex",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "mpvue quickstart",
+  "description": "mpvue quickstart support alipay mp",
   "scripts": {
     "docs": "cd docs && gitbook serve",
     "docs:deploy": "bash ./deploy-docs.sh"

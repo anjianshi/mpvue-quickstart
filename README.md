@@ -1,11 +1,11 @@
-# mpvue-quickstart
+# mpvue-quickstart-ex
 
-> fork 自 [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack)修改而来。
+> fork 自 [mpvue/mpvue-quickstart](https://github.com/mpvue/mpvue-quickstart)，使其能打包出支付宝小程序代码
 
 ## 基本用法
 ``` bash
 $ npm install -g vue-cli
-$ vue init mpvue/mpvue-quickstart my-project
+$ vue init mpvue-quickstart-ex my-project
 $ cd my-project
 $ npm install
 $ npm run dev
