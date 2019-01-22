@@ -9,7 +9,7 @@ var MpvuePlugin = require('webpack-mpvue-asset-plugin')
 var glob = require('glob')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var relative = require('relative')
-var AliReplacePlugin = require('./ali-replace-plugin')
+var aliPlugins = require('./ali-plugins')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -150,16 +150,7 @@ if (process.env.PLATFORM === 'swan') {
 
 if (process.env.PLATFORM == 'ali') {
   baseWebpackConfig = merge(baseWebpackConfig, {
-    plugins: [
-      // 支付宝小程序里没有 global 对象，需要模拟一个
-      new webpack.BannerPlugin({
-        banner: `if(!getApp.global) { getApp.global = { getApp: getApp } } var global = getApp.global;\n`,
-        test: /\.js$/,
-        raw: true,
-      }),
-
-      new AliReplacePlugin()
-    ]
+    plugins: aliPlugins
   })
 }
 
